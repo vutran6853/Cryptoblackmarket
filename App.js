@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import FetchLocation from './components/fetchLocation';
+import Dashboard from './src/components/dashboard/Dashboard'
+
 class App extends Component{
   constructor(props) {
     super(props) 
@@ -8,23 +9,12 @@ class App extends Component{
     this.state = {
 
     }
-    this.handleGetUserLocation = this.handleGetUserLocation.bind(this);
-  }
-
-  handleGetUserLocation() {
-    console.log('hit')
-    navigator.geolocation.getCurrentPosition(postition => {
-      console.log('Line 17', postition)
-    }, error => {
-      console.log('Line 19', error)
-    });
   }
 
   render() {
     return (
       <View style={ styles.container }>
-        <Text>Hello World!</Text>
-        <FetchLocation onGetLocation={ this.handleGetUserLocation } />
+        <Dashboard/>
       </View>
     );
   }
@@ -36,16 +26,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 

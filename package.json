@@ -1,5 +1,5 @@
 {
-  "name": "AwesomeProject",
+  "name": "Cryptoblackmarket",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -18,5 +18,7 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "proxy": "http://localhost:8081"
+
 }
